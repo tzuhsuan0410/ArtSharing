@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>ArtSharing</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+		<style>
+			@import "assets/ArtSharing.css";
+		</style>	
+	</head>
+	<body>
+		
+		<header class="navbar navbar-expand-lg navbar-light navall">
+			<span style="font-size:40px; cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="#" class="sidenavword">Music</a>
+			  <a href="#">Painting</a>
+			  <a href="#">Dance</a>
+			</div>
+
+			<a href="" title=""><img class="search" src="assets/images/search.png" style="width:30px;height:30px;"></a>
+
+			<h1 class="title"><span class="title01">Art</span> <span class="title02">sharing</span></h1>
+			
+			<a href="" title=""><img  src="assets/images/member.png"  style="width:40px;height:40px;"></a>
+			<a href="" title=""><p class="member">會員</p></a>
+	
+
+		</header>
+
+		<div class="container-fluid banner">
+			<img  class="brightness" src="assets/images/Banner.jpg" style="width:100%;height:300px;">
+			
+			<h1 class="ml6 container-fluid">
+			  <span class="text-wrapper">
+			    <span class="letters">Heartily welcome to join us</span>
+			  </span>
+			</h1>
+		</div>
+
+
+		<div class="container-fluid">
+			<div class="option01 option">
+				<a href="" title=""><img src="assets/images/Music.png" style="width:100%;height:300px;">
+				<div class="optionword01">Music</div></a>
+			</div>
+			<div class="option01 option">
+				<a href="" title=""><img src="assets/images/Painting.png" style="width:100%;height:300px;">
+				<div class="optionword01">Painting</div></a>
+			</div>
+			<div class="option01 option">
+				<a href="" title=""><img src="assets/images/Dance.png" style="width:100%;height:280px;">
+				<div class="optionword01">Dance</div></a>
+			</div>
+			
+		</div>
+
+
+		<footer>
+
+			
+		</footer>
+
+
+
+		<script>
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+
+
+			
+			  var textWrapper = document.querySelector('.ml6 .letters');
+				textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+				anime.timeline({})
+				  .add({
+				    targets: '.ml6 .letter',
+				    translateY: ["1.1em", 0],
+				    translateZ: 0,
+				    duration: 750,
+				    delay: (el, i) => 50 * i
+				  })
+		</script>
+		   
+
+	</body>
+</html>
